@@ -1,0 +1,42 @@
+.logo_home{
+    width: 40px;
+    height: 40px;
+}
+
+.titulo_home{
+    color: #499F68;
+    margin-left: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+#pet-cards-container {
+    display: flex; /* Para os cards ficarem lado a lado */
+    flex-wrap:wrap;
+    gap: 1rem; /* Espaçamento entre os cards */
+    width: 20vw;
+    color: #499F68;
+    font-weight: 600;
+    text-align: center;
+}
+
+.custom-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Exemplo de sombra */
+}
+
+
+#pet-modal {
+    z-index: 1000000; /* Para garantir que o modal fique acima de outros elementos */
+    align-items: center;
+    text-align: center;
+}
+
+.icone_upload {
+    max-width: 25%; /* Garante que o ícone não ultrapasse o tamanho do contêiner */
+    height: auto;    /* Mantém a proporção do ícone */
+    display: block;  /* Para centralizar usando margin */
+    margin: 0 auto;  /* Centraliza horizontalmente */
+}
