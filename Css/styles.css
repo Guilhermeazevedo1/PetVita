@@ -1,0 +1,295 @@
+/* Geral */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3{
+    color: #333;
+}
+
+p{
+    color: #70747a;
+}
+
+/* Navbar */
+
+.navbar_container{
+    width: 100%;
+    height: 80px;
+    background-color: #232a31;
+    padding: 0 2rem;
+}
+
+nav{
+    position: relative;
+}
+
+.logo{
+    margin-top: 10px;
+    width: 60px;
+}
+
+.navbar_items{
+    display: flex;
+    position: absolute;
+    gap: 50px;
+    right: 0;
+    top: 30px;
+    margin: 0;
+    
+}
+
+.navbar_items li{
+    text-transform: uppercase;
+    list-style: none;
+}
+
+.navbar_items a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5;
+}
+
+.navbar_items a:hover{
+    color: #ccc;
+}
+
+.default_btn{
+    padding: 15px 30px;
+    background-color: #2cc76a;
+    transition: 0.5;
+    border-radius: 5px;
+}
+
+.navbar_items .default_btn:hover{
+    color: #fff;
+    background-color: #22bb5f;
+}
+
+/* Main */
+
+.main_banner{
+    background-image: url("../Assets/Banner.jpg");
+    padding: 15rem 0rem;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.main_banner h1, .main_banner p{
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: #000 3px 2px 3px;
+}
+
+.main_banner h1{
+    font-size: 54px;
+}
+
+.main_banner p{
+    font-size: 32px;
+}
+
+/* about_us */
+
+.about_us{
+    padding: 5rem 0;
+}
+
+.about_us ul{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.about_us li{
+    flex: 1 1 200px;
+    list-style: none;
+    text-align: center;
+    padding: 20px;
+    line-height: 23px;
+}
+
+.fas{
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.fa-shield-alt{
+    color: #2cc76a;
+}
+
+.fa-rocket{
+    color: #ef3f29;
+}
+
+.fa-comments{
+    color: #ef8f29;
+}
+
+.services_container h3{
+    margin-bottom: 25px;
+}
+
+.services_container p{
+    line-height: 24px;
+}
+
+
+/* about app */
+
+.about_app{
+    background-color: #34454e;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.about_app h2{
+    color: #fff;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.about_app p{
+    color: #d5d5d5;
+    font-size: 23px;
+    margin-bottom: 25px;
+    padding: 0rem 40rem;
+}
+
+
+.about_app input[type="submit"]:hover{
+    
+    opacity:1;
+}
+
+/* contact form */
+
+.contact_container{
+    text-align: center;
+    padding: 5rem 0 2rem 0;
+}
+
+.contact_container h2{
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.contact_container p{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.contact_container input,
+.contact_container textarea{
+    width: 224px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 0 10px 20px;
+}
+
+.contact_container textarea{
+    display: block;
+    margin: 0 auto 20px;
+    width: 470px;
+    height: 150px;
+}
+
+.contact_container input[type="submit"]{
+    display: block;
+    margin: 0 auto;
+    background-color: #2cc76a;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* footer */
+
+footer{
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0 0;
+    height: 100px;
+    background-color: #34454e;
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+}
+
+footer p{
+    color: #fff;
+}
+
+/* responsividade*/
+
+/*small laptops a partir de 1100px*/
+@media (max-width: 1100px) {
+    .plans_container{
+       width: 95%;
+    }
+    
+    .plan{
+        margin: 0 5px;
+    }
+}
+
+/*tablet 900px */
+
+@media (max-width: 900px) {
+    .main_banner p{
+        padding: 0 6rem;
+    }
+
+    .searchdomain_container{
+        padding: 2rem 4rem;
+    }
+}
+
+/*celular 576px */
+
+@media (max-width: 576px) {
+    html,body{
+        overflow-x: hidden;
+    }
+
+    .navbar_items li{
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .main_banner p{
+        padding: 0 2rem;
+    }
+
+    .services_container ul{
+        flex-direction: column;
+    }
+
+    .searchdomain_container h2{
+        font-size: 28px;
+    }
+
+    .searchdomain_container input[type="text"]{
+        width: 100%;
+    }
+
+    .contact_container{
+        padding: 3rem 2rem;
+    }
+
+    .contact_container input,
+    .contact_container textarea{
+        width: 100%;
+        margin: 10px 0;
+    }
+}
