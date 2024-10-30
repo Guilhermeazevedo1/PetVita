@@ -3,7 +3,74 @@
     height: 40px;
 }
 
+#pet-name-display{
+    font-size: 24px;
+    text-align: center;
+}
+
 .flex.flex-col.mt-4{
     display: flex ;
     flex-direction: column;
+    padding: 0 30rem;
+}
+
+.flex.justify-between.mt-4{
+    padding: 0 30rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#modal{
+    padding: 0 30rem;
+}
+
+#sub-modal{
+    padding: 0 30rem;
+}
+
+#modal-title{
+    color: #499F68;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.texto_modal_info_pet{
+    color: #499F68;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+    .flex.flex-col.mt-4{
+        display: flex ;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .flex.justify-between.mt-4{
+        padding: 0;
+    }
+
+    #pet-name-display{
+        margin-top: 40px;
+    }
+
+    #modal{
+        padding: 0;
+        overflow-y: auto; /* Adiciona uma barra de rolagem se o conteúdo exceder a altura máxima */
+    }
+    
+    #sub-modal{
+        padding: 0;
+        
+        overflow-y: auto; /* Adiciona uma barra de rolagem se o conteúdo exceder a altura máxima */
+        
+    }
+
+    
 }
