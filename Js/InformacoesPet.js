@@ -67,8 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const contentHtml = `
                 <label for="exame-type">Tipo de Exame</label>
                 <input type="text" id="exame-type" placeholder="Nome do exame" class="w-full p-2 border rounded-md mb-2">
-                <label for="exame-results">Resultados</label>
-                <input type="text" id="exame-results" placeholder="Resultados do exame" class="w-full p-2 border rounded-md">
+
+                <label for="exame-description">Descrição</label>
+                <input type="text" id="exame-description" placeholder="Descrição do exame" class="w-full p-2 border rounded-md">
+
+                <label for="exame-date">Data do Exame</label>
+                <input type="date" id="exame-date" class="w-full p-2 border rounded-md mb-2">
             `;
             openSubModal('Adicionar Exame', contentHtml);
         };
@@ -171,4 +175,67 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'Home.html'; // Redireciona para a Home
         };
     });
+    function salvarConsulta() {
+        // Captura os valores dos inputs
+        const tipo = document.getElementById('tipoConsulta').value;
+        const data = document.getElementById('dataConsulta').value;
+    
+        // Verifica se os campos estão preenchidos
+        if (!tipo || !data) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+    
+        // Cria uma nova div para a consulta
+        const consultaDiv = document.createElement('div');
+        consultaDiv.className = 'flex items-center justify-between border p-2 mb-2';
+    
+        // Adiciona o ícone à esquerda
+        const icon = document.createElement('span');
+        icon.className = 'material-icons'; // Substitua por sua classe de ícone desejada
+        icon.textContent = 'assignment'; // Ícone de exemplo
+        consultaDiv.appendChild(icon);
+    
+        // Adiciona o título (tipo da consulta) no meio
+        const title = document.createElement('h4');
+        title.textContent = "Consulta"; // Título fixo para "Consulta"
+        title.className = 'flex-grow text-center';
+        consultaDiv.appendChild(title);
+    
+        // Adiciona o tipo de consulta abaixo do título
+        const tipoPara = document.createElement('p');
+        tipoPara.textContent = tipo; // Aqui você usa o valor do input tipo
+        consultaDiv.appendChild(tipoPara);
+    
+        // Adiciona a data à direita
+        const datePara = document.createElement('p');
+        datePara.textContent = data;
+        datePara.className = 'ml-2';
+        consultaDiv.appendChild(datePara);
+    
+        // Adiciona a nova div de consulta na lista de consultas
+        document.getElementById('consultasList').appendChild(consultaDiv);
+    
+        // Limpa os campos do submodal
+        document.getElementById('tipoConsulta').value = '';
+        document.getElementById('dataConsulta').value = '';
+    
+        // Fechar o submodal (opcional)
+        fecharSubmodal();
+    }
+    
+    // Função para fechar o submodal
+    function fecharSubmodal() {
+        document.getElementById('submodalConsulta').classList.add('hidden');
+    }
+    
+    // Vinculando o botão ao evento de clique
+    document.getElementById('btnSalvarConsulta').addEventListener('click', salvarConsulta);
+    
+    // Função para fechar o submodal
+    function fecharSubmodal() {
+        document.getElementById('submodalConsulta').classList.add('hidden');
+    }
+
+    
 });
